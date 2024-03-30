@@ -40,6 +40,9 @@ module.exports = function() {
 	// Load the 'index' routing file
 	require('../app/routes/index.server.routes.js')(app);
 
+	// Load the user routing file used for http REST requests.
+	require('../app/routes/user.server.routes.js')(app);
+
 	// Configure static file serving
 	app.use(express.static('./public'));
 
